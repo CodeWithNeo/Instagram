@@ -13,7 +13,7 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var storyboard = UIStoryboard(name: "Main", bundle: nil)
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -29,7 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         )
         
-        
+        // check if user is logged in.
+        if PFUser.currentUser() != nil {
+            // if there is a logged in user then load the home view controller
+            let vc = storyboard.instantiateViewControllerWithIdentifier("PhotoViewController") as UIViewController
+            window?.rootViewController = vc
+        }
         
         return true
     }
