@@ -83,7 +83,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feed" id="X3E-Od-peq"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="Home-100" selectedImage="Home Filled-100" id="X3E-Od-peq"/>
                     <navigationItem key="navigationItem" id="r4D-3L-SSP"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -128,7 +128,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Camera" id="xUx-vF-UHz"/>
+                    <tabBarItem key="tabBarItem" title="Camera" image="Camera-100" selectedImage="Camera Filled-100" id="xUx-vF-UHz"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="captionTextField" destination="OP5-aY-2Om" id="BaC-0e-OeC"/>
@@ -142,7 +142,7 @@
         <!--Profile-->
         <scene sceneID="RNM-hz-RfI">
             <objects>
-                <viewController id="AD9-Kl-6LA" sceneMemberID="viewController">
+                <viewController id="AD9-Kl-6LA" customClass="ProfileViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cqn-GD-jES"/>
                         <viewControllerLayoutGuide type="bottom" id="sof-cH-hiK"/>
@@ -154,11 +154,14 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcb-2f-nmz">
                                 <rect key="frame" x="160" y="319" width="55" height="30"/>
                                 <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutClicked:" destination="AD9-Kl-6LA" eventType="touchUpInside" id="wRR-Zw-BDt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="mEc-xc-bpL"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Contacts-100" selectedImage="Contacts Filled-100" id="mEc-xc-bpL"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DyB-dQ-Y3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -185,4 +188,12 @@
             <point key="canvasLocation" x="1299.5" y="249.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Camera Filled-100" width="33" height="33"/>
+        <image name="Camera-100" width="33" height="33"/>
+        <image name="Contacts Filled-100" width="33" height="33"/>
+        <image name="Contacts-100" width="33" height="33"/>
+        <image name="Home Filled-100" width="33" height="33"/>
+        <image name="Home-100" width="33" height="33"/>
+    </resources>
 </document>
