@@ -122,7 +122,6 @@
                                 <rect key="frame" x="163" y="464" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <action selector="clickAction:" destination="5No-sh-6mA" eventType="touchUpInside" id="Ul8-bd-nY0"/>
                                     <action selector="submitClicked:" destination="5No-sh-6mA" eventType="touchUpInside" id="Ncx-xS-EF0"/>
                                 </connections>
                             </button>

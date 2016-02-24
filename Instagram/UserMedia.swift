@@ -44,6 +44,7 @@ class UserMedia: NSObject {
      
      - returns: PFFile for the the data in the image
      */
+    
     class func getPFFileFromImage(image: UIImage?) -> PFFile? {
         // check if image is not nil
         if let image = image {

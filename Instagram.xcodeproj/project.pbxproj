@@ -78,12 +78,12 @@
 				71A79DC91C7CD9D60062AA72 /* AppDelegate.swift */,
 				71A79DCB1C7CD9D60062AA72 /* LoginViewController.swift */,
 				71C17C491C7D7047002400D3 /* CameraViewController.swift */,
+				71C17C4D1C7E4A94002400D3 /* UserMedia.swift */,
 				71A79DCD1C7CD9D60062AA72 /* Main.storyboard */,
 				71A79DD01C7CD9D60062AA72 /* Assets.xcassets */,
 				71A79DD21C7CD9D60062AA72 /* LaunchScreen.storyboard */,
 				71A79DD51C7CD9D60062AA72 /* Info.plist */,
 				71C17C4B1C7D74A4002400D3 /* PhotoViewController.swift */,
-				71C17C4D1C7E4A94002400D3 /* UserMedia.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";

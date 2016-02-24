@@ -15,6 +15,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var captionTextField: UITextField!
     
+    var resizedImage:UIImage!
+    
     @IBAction func clickAction(sender: AnyObject) {
         if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil ||  UIImagePickerController.availableCaptureModesForCameraDevice(.Front) != nil { // if has camera
             let vc = UIImagePickerController()
@@ -47,14 +49,11 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func imagePickerController(picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-            
-            
             let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
             let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
             toUploadImage.image = editedImage
             dismissViewControllerAnimated(true, completion: nil)
-            
-            
+            resizedImage = resize(originalImage, newSize: CGSizeMake(UIScreen.mainScreen().bounds.width, 100))
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,9 +63,30 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     
     @IBAction func submitClicked(sender: AnyObject) {
-        print("here")
         
+        UserMedia.postUserImage(resizedImage, withCaption: captionTextField.text, withCompletion: {(success:Bool, error:NSError?) -> Void in
+            if error != nil {
+                print("Error uploading")
+            }
+            if success {
+                print("Success")
+            }
+            }
+        )
     }
+    
+    func resize(image: UIImage, newSize: CGSize) -> UIImage {
+        let resizeImageView = UIImageView(frame: CGRectMake(0, 0, newSize.width, newSize.height))
+        resizeImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        resizeImageView.image = image
+        
+        UIGraphicsBeginImageContext(resizeImageView.frame.size)
+        resizeImageView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    
     
     /*
     // MARK: - Navigation
