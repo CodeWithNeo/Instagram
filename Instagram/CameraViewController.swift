@@ -53,6 +53,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
             toUploadImage.image = editedImage
             dismissViewControllerAnimated(true, completion: nil)
+            
+            
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,6 +65,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func submitClicked(sender: AnyObject) {
         print("here")
+        
     }
     
     /*
