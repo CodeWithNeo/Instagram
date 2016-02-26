@@ -41,7 +41,7 @@ class PhotoViewController: UIViewController, UITableViewDataSource, UITableViewD
         let query = PFQuery(className: "UserMedia")
         query.findObjectsInBackgroundWithBlock { (object:[PFObject]?, error:NSError?) -> Void in
             if nil != object && object?.count != 0{
-                self.photoData.appendContentsOf(object!)
+                self.photoData = object!
                 print(object)
                 self.tableView.reloadData()
             }

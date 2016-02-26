@@ -49,10 +49,28 @@ class UserMedia: NSObject {
         // check if image is not nil
         if let image = image {
             // get image data and check if that is not nil
-            if let imageData = UIImagePNGRepresentation(image) {
+            
+            if let imageData = image.mediumQualityJPEGNSData as NSData? { // choose low to reduce by 1/8
+                var imageSize = Float(imageData.length)
+                
+                imageSize = imageSize/(1024*1024) // in Mb
+                
+                print("Image size is \(imageSize)Mb")
                 return PFFile(name: "image.png", data: imageData)
             }
         }
         return nil
     }
+}
+
+extension UIImage {
+    
+    var highestQualityJPEGNSData:NSData { return UIImageJPEGRepresentation(self, 1.0)! }
+    var highQualityJPEGNSData:NSData    { return UIImageJPEGRepresentation(self, 0.75)!}
+    var mediumQualityJPEGNSData:NSData  { return UIImageJPEGRepresentation(self, 0.5)! }
+    
+    var lowQualityJPEGNSData:NSData     { return UIImageJPEGRepresentation(self, 0.25)!}
+    
+    var lowestQualityJPEGNSData:NSData  { return UIImageJPEGRepresentation(self, 0.0)! }
+    
 }

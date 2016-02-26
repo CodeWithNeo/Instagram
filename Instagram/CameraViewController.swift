@@ -53,7 +53,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
             toUploadImage.image = editedImage
             dismissViewControllerAnimated(true, completion: nil)
-            resizedImage = resize(originalImage, newSize: CGSizeMake(UIScreen.mainScreen().bounds.width, 100))
+            resizedImage = originalImage
+            
     }
     
     override func didReceiveMemoryWarning() {
@@ -75,17 +76,17 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         )
     }
     
-    func resize(image: UIImage, newSize: CGSize) -> UIImage {
-        let resizeImageView = UIImageView(frame: CGRectMake(0, 0, newSize.width, newSize.height))
-        resizeImageView.contentMode = UIViewContentMode.ScaleAspectFill
-        resizeImageView.image = image
-        
-        UIGraphicsBeginImageContext(resizeImageView.frame.size)
-        resizeImageView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage
-    }
+//    func resize(image: UIImage, newSize: CGSize) -> UIImage {
+//        let resizeImageView = UIImageView(frame: CGRectMake(0, 0, newSize.width, newSize.height))
+//        resizeImageView.contentMode = UIViewContentMode.ScaleAspectFill
+//        resizeImageView.image = image
+//        
+//        UIGraphicsBeginImageContext(resizeImageView.frame.size)
+//        resizeImageView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+//        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        return newImage
+//    }
     
     
     /*
@@ -99,3 +100,4 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     */
     
 }
+
