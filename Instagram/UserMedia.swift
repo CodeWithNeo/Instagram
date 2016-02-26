@@ -28,6 +28,7 @@ class UserMedia: NSObject {
         
         // Add relevant fields to the object
         media["media"] = getPFFileFromImage(image) // PFFile column type
+        print(PFUser.currentUser())
         media["author"] = PFUser.currentUser() // Pointer column type that points to PFUser
         media["caption"] = caption
         media["likesCount"] = 0
