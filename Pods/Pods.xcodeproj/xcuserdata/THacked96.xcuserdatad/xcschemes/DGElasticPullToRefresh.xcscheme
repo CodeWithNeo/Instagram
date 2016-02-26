@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '06FA70FB25D3C090E5E7303E'
-               BlueprintName = 'Pods-Instagram'
+               BlueprintIdentifier = '6012130CE4620DF2ECCB4FDA'
+               BlueprintName = 'DGElasticPullToRefresh'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_Instagram.framework'>
+               BuildableName = 'DGElasticPullToRefresh.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
