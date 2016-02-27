@@ -17,30 +17,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uLm-af-LCr">
-                                <rect key="frame" x="20" y="50" width="335" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uLm-af-LCr">
+                                <rect key="frame" x="20" y="114" width="335" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EFB-72-zPP">
-                                <rect key="frame" x="20" y="157" width="335" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EFB-72-zPP">
+                                <rect key="frame" x="20" y="221" width="335" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIK-NO-Zn3">
-                                <rect key="frame" x="164" y="259" width="47" height="30"/>
-                                <state key="normal" title="Sign In"/>
+                                <rect key="frame" x="0.0" y="323" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.77067550510000005" green="0.52024286939999997" blue="0.2321364886" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6VE-tH-NpN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOa-Zs-MkF">
-                                <rect key="frame" x="160" y="329" width="55" height="30"/>
-                                <state key="normal" title="Sign Up"/>
+                                <rect key="frame" x="0.0" y="393" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.77067550510000005" green="0.52024286939999997" blue="0.2321364886" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZpT-Vc-1YC"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insta2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf9-xB-bXF">
+                                <rect key="frame" x="149" y="626" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vV-by-Uvo">
+                                <rect key="frame" x="151" y="85" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNS-UG-p6x">
+                                <rect key="frame" x="151" y="192" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -78,12 +102,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="320.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6W-gI-Ewc">
-                                                    <rect key="frame" x="8" y="286" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fzg-Mc-jNX">
                                                     <rect key="frame" x="0.0" y="31" width="375" height="239.5"/>
                                                 </imageView>
@@ -141,7 +159,6 @@
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submitClicked:" destination="5No-sh-6mA" eventType="touchUpInside" id="Ncx-xS-EF0"/>
-                                    <segue destination="GKb-He-Chw" kind="show" id="FEf-4A-xIK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -152,6 +169,7 @@
                     <connections>
                         <outlet property="captionTextField" destination="OP5-aY-2Om" id="BaC-0e-OeC"/>
                         <outlet property="toUploadImage" destination="zOd-aN-Xbh" id="SAp-LA-tB9"/>
+                        <segue destination="GKb-He-Chw" kind="show" identifier="feed" id="Zvv-Ee-Bsu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxZ-KR-0f7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -171,8 +189,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcb-2f-nmz">
-                                <rect key="frame" x="160" y="319" width="55" height="30"/>
-                                <state key="normal" title="Log Out"/>
+                                <rect key="frame" x="0.0" y="319" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.77067550505050508" green="0.52024286942242537" blue="0.23213648856670852" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="logOutClicked:" destination="AD9-Kl-6LA" eventType="touchUpInside" id="wRR-Zw-BDt"/>
                                 </connections>
@@ -204,7 +225,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u94-iT-kQX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1347.5" y="241.5"/>
+            <point key="canvasLocation" x="1165.5" y="241.5"/>
         </scene>
     </scenes>
     <resources>
@@ -216,6 +237,6 @@
         <image name="Home-100" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="plh-Dc-Ery"/>
+        <segue reference="Zvv-Ee-Bsu"/>
     </inferredMetricsTieBreakers>
 </document>

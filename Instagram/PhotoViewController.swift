@@ -14,7 +14,7 @@ class PhotoViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     var photoData : [PFObject] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,27 +24,28 @@ class PhotoViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         
         let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-        loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
+        loadingView.tintColor = UIColor.whiteColor()
         tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
             self!.retrieve()
             self?.tableView.dg_stopLoading()
             }, loadingView: loadingView)
-        tableView.dg_setPullToRefreshFillColor(UIColor(red: 57/255.0, green: 67/255.0, blue: 89/255.0, alpha: 1.0))
+        tableView.dg_setPullToRefreshFillColor(UIColor(red: 184/255.0, green: 113/255.0, blue: 45/255.0, alpha: 1.0))
         tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
         
         tableView.rowHeight = 320
-
+        
         
         retrieve()
+        
     }
     
     func retrieve() {
-        print("here")
+//        print("here")
         let query = PFQuery(className: "UserMedia")
         query.findObjectsInBackgroundWithBlock { (object:[PFObject]?, error:NSError?) -> Void in
             if nil != object && object?.count != 0{
                 self.photoData = object!
-                print(object)
+//                print(object)
                 self.tableView.reloadData()
             }
         }
@@ -52,7 +53,7 @@ class PhotoViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("PhotoTableViewCell") as? PhotoTableViewCell
-        let userMedia = self.photoData[indexPath.row]
+        let userMedia = self.photoData[indexPath.section]
         let media = userMedia.objectForKey("media") as! PFFile
         let updatedAt = userMedia.updatedAt
         cell!.insta_photo.image = UIImage(named: "icon")
@@ -87,32 +88,30 @@ class PhotoViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         // Add a UILabel for the username here
         let label = UILabel(frame: CGRect(x: 0, y: -5, width: 320, height: 50))
-        //        label.center = CGPointMake(160, 284)
-//        label.textAlignment = NSTextAlignment.Center
-//        let user = feed![section]["user"] as! NSDictionary
-//        
-//        if let name = user["username"] as? String {
-//            label.text = name
-//        } else {
-//            label.text = "no name"
-//        }
+//        label.center = CGPointMake(160, 284)
+        label.textAlignment = NSTextAlignment.Center
+        //        let user = feed![section]["user"] as! NSDictionary
+        //
+        //        if let name = user["username"] as? String {
+        //            label.text = name
+        //        } else {
+        //            label.text = "no name"
+        //        }
         print(section)
         let userMedia = self.photoData[section]
         
+        print(userMedia)
+        
         let media = userMedia.objectForKey("media") as! PFFile
-        let author = userMedia.objectForKey("author") as! PFUser
+        let author = userMedia.objectForKey("username1") as! String
+        label.text = author
         
         profileView.image = UIImage(named: "icon")
         
         media.getDataInBackgroundWithBlock({ (data:NSData?, error:NSError?) -> Void in
             if data != nil {
+                
                 profileView.image = UIImage(data: data!)
-                if let name = author.username  {
-                    print(name)
-                    label.text = name
-                } else {
-                    label.text = "no name"
-                }
             }
         })
         
@@ -125,7 +124,7 @@ class PhotoViewController: UIViewController, UITableViewDataSource, UITableViewD
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return self.photoData.count
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -133,14 +132,14 @@ class PhotoViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
 
 

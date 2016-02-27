@@ -85,11 +85,17 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Instagram/Bolts.framework"
+  install_framework "Pods-Instagram/DGActivityIndicatorView.framework"
   install_framework "Pods-Instagram/DGElasticPullToRefresh.framework"
+  install_framework "Pods-Instagram/ElasticTransition.framework"
+  install_framework "Pods-Instagram/MotionAnimation.framework"
   install_framework "Pods-Instagram/Parse.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Instagram/Bolts.framework"
+  install_framework "Pods-Instagram/DGActivityIndicatorView.framework"
   install_framework "Pods-Instagram/DGElasticPullToRefresh.framework"
+  install_framework "Pods-Instagram/ElasticTransition.framework"
+  install_framework "Pods-Instagram/MotionAnimation.framework"
   install_framework "Pods-Instagram/Parse.framework"
 fi

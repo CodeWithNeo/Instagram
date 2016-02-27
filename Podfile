@@ -6,5 +6,7 @@ use_frameworks!
 target 'Instagram' do
     pod 'Parse'
     pod "DGElasticPullToRefresh"
+    pod 'DGActivityIndicatorView'
+    pod "ElasticTransition"
 end
 
