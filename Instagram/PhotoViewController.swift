@@ -42,6 +42,7 @@ class PhotoViewController: UIViewController, UITableViewDataSource, UITableViewD
     func retrieve() {
 //        print("here")
         let query = PFQuery(className: "UserMedia")
+        query.orderByDescending("createdAt")           
         query.findObjectsInBackgroundWithBlock { (object:[PFObject]?, error:NSError?) -> Void in
             if nil != object && object?.count != 0{
                 self.photoData = object!
@@ -87,7 +88,10 @@ class PhotoViewController: UIViewController, UITableViewDataSource, UITableViewD
         //         profileView.setImageWithURL(...)
         
         // Add a UILabel for the username here
-        let label = UILabel(frame: CGRect(x: 0, y: -5, width: 320, height: 50))
+        let label = UILabel(frame: CGRect(x: 0, y: 2, width: 320, height: 50))
+        let label2 = UILabel(frame: CGRect(x: 0, y: -5, width: 320, height: 50))
+        label2.textAlignment = NSTextAlignment.Center
+        
 //        label.center = CGPointMake(160, 284)
         label.textAlignment = NSTextAlignment.Center
         //        let user = feed![section]["user"] as! NSDictionary

@@ -139,11 +139,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byE-vR-WJo">
-                                <rect key="frame" x="170" y="397" width="34" height="30"/>
-                                <state key="normal" title="Click"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xN4-nz-G96">
+                                <rect key="frame" x="0.0" y="28" width="375" height="246"/>
+                                <state key="normal" title="Tap here to take pic">
+                                    <color key="titleColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="clickAction:" destination="5No-sh-6mA" eventType="touchUpInside" id="gJQ-bV-M2q"/>
+                                    <action selector="tapClicked:" destination="5No-sh-6mA" eventType="touchUpInside" id="eZD-Jk-Tns"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zOd-aN-Xbh">
@@ -155,8 +157,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbn-eO-2qb">
-                                <rect key="frame" x="163" y="464" width="49" height="30"/>
-                                <state key="normal" title="Submit"/>
+                                <rect key="frame" x="0.0" y="393" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.77067550510000005" green="0.52024286939999997" blue="0.2321364886" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="submitClicked:" destination="5No-sh-6mA" eventType="touchUpInside" id="Ncx-xS-EF0"/>
                                 </connections>

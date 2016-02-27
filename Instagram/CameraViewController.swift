@@ -9,7 +9,7 @@
 import UIKit
 import MobileCoreServices
 
-class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var toUploadImage: UIImageView!
     
@@ -17,7 +17,14 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     var resizedImage:UIImage!
     
-    @IBAction func clickAction(sender: AnyObject) {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    
+    
+    @IBAction func tapClicked(sender: AnyObject) {
         if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil ||  UIImagePickerController.availableCaptureModesForCameraDevice(.Front) != nil { // if has camera
             let vc = UIImagePickerController()
             vc.delegate = self
@@ -43,6 +50,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.captionTextField.delegate = self
         
         // Do any additional setup after loading the view.
     }

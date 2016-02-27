@@ -34,6 +34,7 @@ class UserMedia: NSObject {
         media["likesCount"] = 0
         media["commentsCount"] = 0
         
+        
         // Save object (following function will save the object in Parse asynchronously)
         media.saveInBackgroundWithBlock(completion)
     }
