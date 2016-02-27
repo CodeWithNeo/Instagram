@@ -38,7 +38,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://youtu.be/Ay0pAOWAUsQ' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+https://youtu.be/Ay0pAOWAUsQ
 
 Video created with QuickTime and uploaded to YouTube.
 
