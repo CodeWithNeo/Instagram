@@ -8,6 +8,7 @@
 
 import UIKit
 import MobileCoreServices
+import DGActivityIndicatorView
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
@@ -16,6 +17,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var captionTextField: UITextField!
     
     var resizedImage:UIImage!
+    
+    let activityIndicatorView = DGActivityIndicatorView(type: DGActivityIndicatorAnimationType.RotatingSquares, tintColor: UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0), size: 70.0)
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
@@ -72,14 +75,21 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     
     @IBAction func submitClicked(sender: AnyObject) {
+        activityIndicatorView.center = self.view.center
+        self.view.addSubview(activityIndicatorView)
+        activityIndicatorView.startAnimating()
         
         if(resizedImage != nil) {
             UserMedia.postUserImage(resizedImage, withCaption: captionTextField.text, withCompletion: {(success:Bool, error:NSError?) -> Void in
                 if error != nil {
                     print("Error uploading")
+                    self.activityIndicatorView.stopAnimating()
+                    self.activityIndicatorView.removeFromSuperview()
                 }
                 if success {
                     print("Success")
+                    self.activityIndicatorView.stopAnimating()
+                    self.activityIndicatorView.removeFromSuperview()
                     self.performSegueWithIdentifier("feed", sender: nil)
                 }
                 }

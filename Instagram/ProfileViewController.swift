@@ -24,7 +24,8 @@ class ProfileViewController: UIViewController {
                 print("error logging out")
             } else {
                 print("success logging out")
-                self.tabBarController?.dismissViewControllerAnimated(true, completion: nil)
+//                self.tabBarController?.dismissViewControllerAnimated(true, completion: nil)
+                self.performSegueWithIdentifier("logout", sender: nil)
             }
         }
 

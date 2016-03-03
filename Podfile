@@ -8,5 +8,6 @@ target 'Instagram' do
     pod "DGElasticPullToRefresh"
     pod 'DGActivityIndicatorView'
     pod "ElasticTransition"
+    pod 'SCLAlertView'
 end
 

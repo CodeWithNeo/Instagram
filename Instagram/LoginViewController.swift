@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import SCLAlertView
 
 class LoginViewController: UIViewController {
     
@@ -30,6 +31,7 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsernameInBackground(username, password: password) { (user: PFUser?, error: NSError?) -> Void in
             if let error = error {
                 print("User login failed.")
+                SCLAlertView().showError("Login Failed", subTitle: "Check the username and password") // Error
                 print(error.localizedDescription)
             } else {
                 print("User logged in successfully")
@@ -56,6 +58,7 @@ class LoginViewController: UIViewController {
                 print(error.localizedDescription)
                 if error.code == 202 {
                     print("User name is taken")
+                    SCLAlertView().showError("Username Taken", subTitle: "Choose another username") // Error
                 }
             } else {
                 print("User Registered successfully")

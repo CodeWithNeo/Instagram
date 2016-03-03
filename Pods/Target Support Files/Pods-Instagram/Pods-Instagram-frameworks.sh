@@ -90,6 +90,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Instagram/ElasticTransition.framework"
   install_framework "Pods-Instagram/MotionAnimation.framework"
   install_framework "Pods-Instagram/Parse.framework"
+  install_framework "Pods-Instagram/SCLAlertView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Instagram/Bolts.framework"
@@ -98,4 +99,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Instagram/ElasticTransition.framework"
   install_framework "Pods-Instagram/MotionAnimation.framework"
   install_framework "Pods-Instagram/Parse.framework"
+  install_framework "Pods-Instagram/SCLAlertView.framework"
 fi

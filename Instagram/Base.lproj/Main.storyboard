@@ -77,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="538.5" y="241.5"/>
+            <point key="canvasLocation" x="1146.5" y="1385.5"/>
         </scene>
         <!--Feed-->
         <scene sceneID="XFK-8B-pSR">
@@ -208,6 +208,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="Contacts-100" selectedImage="Contacts Filled-100" id="mEc-xc-bpL"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logout" id="qm2-8g-7KJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DyB-dQ-Y3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -242,6 +245,6 @@
         <image name="Home-100" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zvv-Ee-Bsu"/>
+        <segue reference="plh-Dc-Ery"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '848FDE0EB13A5AB3D55CDCAC'
-               BlueprintName = 'ElasticTransition'
+               BlueprintIdentifier = 'AE5871664FC7C036695FD63F'
+               BlueprintName = 'SCLAlertView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'ElasticTransition.framework'>
+               BuildableName = 'SCLAlertView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
