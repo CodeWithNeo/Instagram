@@ -36,9 +36,9 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 ## Video Walkthrough 
 
-Here's a walkthrough of implemented user stories:
+Here's the updated walkthrough of implemented user stories:
 
-https://youtu.be/Ay0pAOWAUsQ
+https://www.youtube.com/watch?v=9RYEdZGpPW4
 
 Video created with QuickTime and uploaded to YouTube.
 
